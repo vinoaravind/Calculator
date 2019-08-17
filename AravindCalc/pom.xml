@@ -20,13 +20,7 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>6.9.8</version>
-      <scope>test</scope>
-    </dependency>   
+    </dependency> 
   </dependencies>
 <build>
 	<pluginManagement>
@@ -66,6 +60,11 @@
 						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<systemPropertyVariables>
+						<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+					</systemPropertyVariables>
+				</configuration>
 			</plugin>
 		</plugins>
 	</pluginManagement>
